@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import LinkITrack
 
 class ViewController: UIViewController {
+    
+    var clientTrackingMap: LNKTClientTracking? = nil;
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        LNKTClientTracking.setApiKey(apiKey: "Test API Key")
+        
+        clientTrackingMap = LNKTClientTracking(view: self.view)
+        
+        clientTrackingMap?.watchJob(jobId: "8d62e37a-b44f-4ffc-bc3d-41ab6d5982ea")
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,4 +29,3 @@ class ViewController: UIViewController {
     }
 
 }
-

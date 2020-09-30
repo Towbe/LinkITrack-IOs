@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LinkITrack'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'A short description of LinkITrack.'
 
 # This description is used to generate tags and improve search results.
@@ -17,18 +17,24 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = 'Add client-tracking into your own app from LinkIT'
+  
+  s.pod_target_xcconfig = {
+    'DEFINES_MODULE' => 'YES'
+    
+  }
+  s.static_framework = true
+  
+  s.swift_versions = '4.0'
 
-  s.homepage         = 'https://github.com/Baltagih2/LinkITrack'
+  s.homepage         = 'https://github.com/Towbe/LinkITrack'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Baltagih2' => 'hadi@towbe.com' }
-  s.source           = { :git => 'https://github.com/Baltagih2/LinkITrack.git', :tag => s.version.to_s }
+  s.author           = { 'LinKIT' => 'admin@towbe.com' }
+  s.source           = { :git => 'https://github.com/Towbe/LinkITrack.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = "10.0"
 
   s.source_files = 'LinkITrack/Classes/**/*'
   
@@ -39,4 +45,8 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  
+  s.dependency 'GoogleMaps'
+  
+  s.frameworks = "Foundation", "UIKit"
 end
