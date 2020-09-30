@@ -95,11 +95,8 @@ public class LNKTClientTracking {
                 let decoder = JSONDecoder()
                 //create json object from data
                 if let unwraped = data {
-                    print(String(decoding: unwraped, as: UTF8.self))
                     let gqlStruct = try decoder.decode([GraphData].self, from:unwraped)
-                    print(gqlStruct);
                     self.data = gqlStruct[0].data?.jobs?[0];
-                    print(self.data);
                     self.vehicleMarker.position = CLLocationCoordinate2D(latitude: Double(self.data?.driver?.driver_location?.lat ?? 0), longitude: Double(self.data?.driver?.driver_location?.lng ?? 0))
                     self.destinationMarker.position = CLLocationCoordinate2D(latitude: Double(self.data?.destinations?[1].location?.lat ?? 0), longitude: Double(self.data?.destinations?[1].location?.lng ?? 0))
                 }
