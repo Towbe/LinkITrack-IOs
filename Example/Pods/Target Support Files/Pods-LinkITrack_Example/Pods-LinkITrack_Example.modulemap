@@ -1,0 +1,6 @@
+framework module Pods_LinkITrack_Example {
+  umbrella header "Pods-LinkITrack_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

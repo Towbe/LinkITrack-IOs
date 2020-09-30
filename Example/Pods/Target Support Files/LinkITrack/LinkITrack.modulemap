@@ -1,0 +1,6 @@
+framework module LinkITrack {
+  umbrella header "LinkITrack-umbrella.h"
+
+  export *
+  module * { export * }
+}
