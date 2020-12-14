@@ -298,7 +298,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-LinkITrack_Example/Pods-LinkITrack_Example-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${BUILT_PRODUCTS_DIR}/LinkITrack/LinkITrack.framework/NotTrackable.nib",
-				"${PODS_ROOT}/../../LinkITrack/Resources/TruckIcon.png",
+				"${PODS_ROOT}/../../LinkITrack/Assets/TruckIcon.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
