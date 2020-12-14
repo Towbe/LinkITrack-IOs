@@ -1,6 +1,6 @@
 {
   "name": "LinkITrack",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "summary": "A short description of LinkITrack.",
   "description": "Add client-tracking into your own app from LinkIT",
   "pod_target_xcconfig": {
@@ -17,13 +17,18 @@
     "LinKIT": "admin@towbe.com"
   },
   "source": {
-    "git": "https://github.com/Towbe/LinkITrack.git",
-    "tag": "0.0.1"
+    "git": "https://github.com/Towbe/LinkITrack-IOs.git",
+    "tag": "0.0.8"
   },
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "LinkITrack/Classes/**/*",
+  "source_files": [
+    "LinkITrack/Classes/**/*"
+  ],
+  "resources": [
+    "LinkITrack/Resources/**/*"
+  ],
   "dependencies": {
     "GoogleMaps": [
 

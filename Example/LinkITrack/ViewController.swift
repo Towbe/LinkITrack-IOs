@@ -16,11 +16,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        LNKTClientTracking.setApiKey(apiKey: "Test API Key")
+        LNKTClientTracking.setApiKey(apiKey: "s770KcORul14KtRDrRonfnoR8xC8PMtFDrVm8pCn")
         
         clientTrackingMap = LNKTClientTracking(view: self.view)
         
-        clientTrackingMap?.watchJob(jobId: "8d62e37a-b44f-4ffc-bc3d-41ab6d5982ea")
+        clientTrackingMap?.watchJob(jobId: "83b83540-143e-eb11-a2e2-ef819a435c14")
     }
 
     override func didReceiveMemoryWarning() {

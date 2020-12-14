@@ -36,7 +36,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = "10.0"
 
-  s.source_files = 'LinkITrack/Classes/**/*'
+  s.source_files = ['LinkITrack/Classes/**/*']
+  
+  s.resources = ['LinkITrack/Resources/**/*']
   
   # s.resource_bundles = {
   #   'LinkITrack' => ['LinkITrack/Assets/*.png']

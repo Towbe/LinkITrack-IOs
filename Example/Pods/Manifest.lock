@@ -9,21 +9,15 @@ PODS:
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
-  - LinkITrack (0.0.1):
+  - LinkITrack (0.0.8):
     - GoogleMaps
   - Nimble (7.3.4)
-  - Nimble-Snapshots (6.3.0):
-    - Nimble-Snapshots/Core (= 6.3.0)
-  - Nimble-Snapshots/Core (6.3.0):
-    - FBSnapshotTestCase (~> 2.0)
-    - Nimble (~> 7.0)
   - Quick (1.2.0)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
   - LinkITrack (from `../`)
   - Nimble (~> 7.0)
-  - Nimble-Snapshots (~> 6.3.0)
   - Quick (~> 1.2.0)
 
 SPEC REPOS:
@@ -31,7 +25,6 @@ SPEC REPOS:
     - FBSnapshotTestCase
     - GoogleMaps
     - Nimble
-    - Nimble-Snapshots
     - Quick
 
 EXTERNAL SOURCES:
@@ -41,11 +34,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
-  LinkITrack: a9277eb3a337e825eed33aee835fe38617c2443a
+  LinkITrack: 58b9f8ad80c48bdd3fb81d44d2de347bcfdc9cf7
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
-  Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 9b7610924e483648bd86b075b450f50175b230be
+PODFILE CHECKSUM: 5346e3e71c3484833f7e0367330d2cb37a96c4ee
 
 COCOAPODS: 1.10.0.beta.1
