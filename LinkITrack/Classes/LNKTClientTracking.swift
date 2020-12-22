@@ -58,6 +58,8 @@ public class LNKTClientTracking {
         }
     }
     
+    public func isTrackable
+    
     func fetch(jobId: String) {
         do {
         let requestBody: [Any]  = [
