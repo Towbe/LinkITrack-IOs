@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         
         clientTrackingMap = LNKTClientTracking(view: self.view)
         
-        clientTrackingMap?.watchJob(jobId: "83b83540-143e-eb11-a2e2-ef819a435c14")
+        clientTrackingMap?.watchJob(jobId: "601a8bc9-7082-eb11-a2e2-ef819a435c14")
     }
 
     override func didReceiveMemoryWarning() {

@@ -22,6 +22,7 @@ public struct Job: Codable {
     var destinations: [Destination]?
     var driver: Driver?
     var eta: Int?
+    var trackable: Bool?
 }
 
 public struct GraphInternalData: Codable {
@@ -46,7 +47,7 @@ public class LNKTClientTracking {
     
     public var data: Job? = nil;
     
-    let query = "query ($job: ID!) {  jobs(foreignIds: [$job]) {    driver {      first_name      last_name      profilePicture      phone_number      driver_location {        lat        lng      }    }    eta    destinations {   eta   location {        lat        lng      }    }  }}";
+    let query = "query ($job: ID!) {  jobs(foreignIds: [$job]) { trackable    driver {      driver_location {        lat        lng      }    }    eta    destinations {   eta   location {        lat        lng      }    }  }}";
     
     func setMapHidden(value: Bool) {
         DispatchQueue.main.async {
@@ -57,8 +58,6 @@ public class LNKTClientTracking {
                 self.notTrackable.isHidden = !value;
         }
     }
-    
-    public func isTrackable
     
     func fetch(jobId: String) {
         do {
@@ -97,7 +96,6 @@ public class LNKTClientTracking {
             
             guard error == nil else {
                 // Ignore
-//                print("error: ", error);
                 return
             }
 
@@ -118,7 +116,7 @@ public class LNKTClientTracking {
                             self.data = gqlStruct[0].data?.jobs?[0];
                             self.vehicleMarker.position = CLLocationCoordinate2D(latitude: Double(self.data?.driver?.driver_location?.lat ?? 0), longitude: Double(self.data?.driver?.driver_location?.lng ?? 0))
                             self.destinationMarker.position = CLLocationCoordinate2D(latitude: Double(self.data?.destinations?[0].location?.lat ?? 0), longitude: Double(self.data?.destinations?[0].location?.lng ?? 0))
-                            self.setMapHidden(value: false)
+                            self.setMapHidden(value: self.data?.trackable != true);
                             
                             DispatchQueue.main.async {
                                 let cameraUpdate = GMSCameraUpdate.fit(GMSCoordinateBounds(
@@ -173,11 +171,12 @@ public class LNKTClientTracking {
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
         marker.map = mapView
-        marker.icon = UIImage(named: "TruckIcon")
+        marker.icon = UIImage(named: "cvlogo_round");
         
         self.map = mapView;
         self.vehicleMarker = marker;
-        self.destinationMarker = GMSMarker()
+        self.destinationMarker = GMSMarker();
+        self.destinationMarker.icon = UIImage(named: "satellite_round");
         
         self.destinationMarker.map = mapView
         
