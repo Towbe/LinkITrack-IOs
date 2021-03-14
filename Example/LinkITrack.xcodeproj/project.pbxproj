@@ -298,12 +298,16 @@
 				"${PODS_ROOT}/Target Support Files/Pods-LinkITrack_Example/Pods-LinkITrack_Example-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 				"${BUILT_PRODUCTS_DIR}/LinkITrack/LinkITrack.framework/NotTrackable.nib",
+				"${PODS_ROOT}/../../LinkITrack/Assets/cvlogo_round.png",
+				"${PODS_ROOT}/../../LinkITrack/Assets/satellite_round.png",
 				"${PODS_ROOT}/../../LinkITrack/Assets/TruckIcon.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/NotTrackable.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cvlogo_round.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/satellite_round.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TruckIcon.png",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

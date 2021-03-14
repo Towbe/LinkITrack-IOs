@@ -9,7 +9,7 @@ PODS:
   - GoogleMaps/Base (3.10.0)
   - GoogleMaps/Maps (3.10.0):
     - GoogleMaps/Base
-  - LinkITrack (0.0.10):
+  - LinkITrack (0.0.11):
     - GoogleMaps
   - Nimble (7.3.4)
   - Quick (1.2.0)
@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   GoogleMaps: 8c080862ff2748ece9929471b30feb56a6c5079d
-  LinkITrack: 914d196286b46aca09316ab354688dcb6578e1eb
+  LinkITrack: 5f086109f22f332c3b1cb336b102eda0ab4a7e62
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 

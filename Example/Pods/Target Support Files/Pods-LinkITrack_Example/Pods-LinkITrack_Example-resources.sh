@@ -99,11 +99,15 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/LinkITrack/LinkITrack.framework/NotTrackable.nib"
+  install_resource "${PODS_ROOT}/../../LinkITrack/Assets/cvlogo_round.png"
+  install_resource "${PODS_ROOT}/../../LinkITrack/Assets/satellite_round.png"
   install_resource "${PODS_ROOT}/../../LinkITrack/Assets/TruckIcon.png"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle"
   install_resource "${BUILT_PRODUCTS_DIR}/LinkITrack/LinkITrack.framework/NotTrackable.nib"
+  install_resource "${PODS_ROOT}/../../LinkITrack/Assets/cvlogo_round.png"
+  install_resource "${PODS_ROOT}/../../LinkITrack/Assets/satellite_round.png"
   install_resource "${PODS_ROOT}/../../LinkITrack/Assets/TruckIcon.png"
 fi
 
